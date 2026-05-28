@@ -1,0 +1,246 @@
+<!DOCTYPE html><html class="light" lang="en" ><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Student Registration | AcademiaPortal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#2170e4",
+                        "on-secondary-container": "#fefcff",
+                        "primary-container": "#10b981",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f7f9ff",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#0058be",
+                        "outline-variant": "#bbcabf",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#00422b",
+                        "tertiary-container": "#9ba2bb",
+                        "surface-tint": "#006c49",
+                        "inverse-surface": "#2d3135",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#4edea3",
+                        "surface-bright": "#f7f9ff",
+                        "on-tertiary-container": "#31394d",
+                        "inverse-on-surface": "#eef1f6",
+                        "surface-container-low": "#f1f4f9",
+                        "outline": "#6c7a71",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e0e3e8",
+                        "surface-container-high": "#e5e8ee",
+                        "on-secondary-fixed": "#001a42",
+                        "on-primary-fixed": "#002113",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-background": "#181c20",
+                        "secondary-fixed": "#d8e2ff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e0e3e8",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "tertiary": "#565e74",
+                        "primary-fixed": "#6ffbbe",
+                        "on-primary-fixed-variant": "#005236",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#4edea3",
+                        "surface-container": "#ebeef3",
+                        "primary": "#006c49",
+                        "background": "#f7f9ff",
+                        "surface-dim": "#d7dadf",
+                        "on-surface-variant": "#3c4a42",
+                        "on-surface": "#181c20"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "8px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "sm": "1rem",
+                        "xs": "0.5rem",
+                        "lg": "2.5rem",
+                        "max-width": "1280px",
+                        "md": "1.5rem",
+                        "margin-desktop": "48px",
+                        "xl": "4rem",
+                        "gutter": "24px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.03em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9ff;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .input-focus-ring:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-on-surface">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4">
+        {% for category, message in messages %}
+          <div class="flex items-center gap-sm p-sm rounded-lg border text-body-sm shadow-md transition-all duration-300 {% if category == 'success' %}bg-green-50 border-green-200 text-green-800{% else %}bg-red-50 border-red-200 text-red-800{% endif %}">
+            <span class="material-symbols-outlined {% if category == 'success' %}text-green-600{% else %}text-red-600{% endif %}">
+              {% if category == 'success' %}check_circle{% else %}error{% endif %}
+            </span>
+            <span>{{ message }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant w-full fixed top-0 z-50">
+<div class="flex justify-between items-center h-16 w-full px-margin-desktop max-w-max-width mx-auto">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold"><span style="font-size: 24px;" class="">&nbsp; &nbsp;Deep Junior College</span></div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="/home">Dashboard</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="/services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="/support">Support</a>
+</nav>
+<div class="flex items-center gap-sm">
+<a href="/login" class="text-secondary font-label-md text-label-md hover:underline mr-2">Login</a>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-all active:scale-95">account_circle</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center py-xl px-margin-mobile pt-24">
+<div class="w-full max-w-[520px] bg-white rounded-xl shadow-[0_4px_12px_rgba(15,23,42,0.04)] border border-outline-variant p-lg md:p-xl transition-all duration-300">
+<!-- Header Section -->
+<div class="text-center mb-lg">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Create Student Account</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Register to access your academic records and portal services.</p>
+</div>
+<!-- Registration Form -->
+<form class="space-y-md" id="registrationForm">
+<!-- Full Name -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="fullName">Full Name</label>
+<input class="h-[48px] px-md border border-outline-variant rounded bg-white text-body-md input-focus-ring transition-all" id="fullName" placeholder="Enter your full name" required="" type="text">
+</div>
+<!-- Email Address -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="email">Email Address</label>
+<input class="h-[48px] px-md border border-outline-variant rounded bg-white text-body-md input-focus-ring transition-all" id="email" placeholder="example@university.edu" required="" type="email">
+</div>
+<!-- Student ID -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="studentId">Student ID / Seat No</label>
+<input class="h-[48px] px-md border border-outline-variant rounded bg-white text-body-md input-focus-ring transition-all" id="studentId" placeholder="e.g. STU-2024-001" required="" type="text">
+</div>
+<!-- Contact Number (Indian +91 Mobile) -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="contact">Mobile Number</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 font-body-md text-on-surface-variant font-semibold pointer-events-none">+91</span>
+<input class="w-full h-[48px] pl-14 pr-md border border-outline-variant rounded bg-white text-body-md input-focus-ring transition-all" id="contact" placeholder="9876543210" required="" type="tel" pattern="[6-9]\d{9}" title="Please enter a valid 10-digit Indian mobile number">
+</div>
+</div>
+<!-- Password -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="password">Password</label>
+<div class="relative">
+<input class="w-full h-[48px] pl-md pr-12 border border-outline-variant rounded bg-white text-body-md input-focus-ring transition-all" id="password" placeholder="••••••••" required="" type="password">
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors" onclick="togglePassword('password')" type="button">
+<span class="material-symbols-outlined" id="password-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="confirmPassword">Confirm Password</label>
+<div class="relative">
+<input class="w-full h-[48px] pl-md pr-12 border border-outline-variant rounded bg-white text-body-md input-focus-ring transition-all" id="confirmPassword" placeholder="••••••••" required="" type="password">
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors" onclick="togglePassword('confirmPassword')" type="button">
+<span class="material-symbols-outlined" id="confirmPassword-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Register Button -->
+<button class="w-full h-[56px] bg-[#10B981] hover:bg-[#059669] text-white font-headline-sm text-headline-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 mt-md" type="submit">
+                    Register for Account
+                </button>
+<!-- Login Redirect -->
+<p class="text-center font-body-sm text-body-sm text-on-surface-variant mt-sm">
+                    Already have an account? <a class="text-secondary font-semibold hover:underline transition-all" href="/login">Login here</a>
+</p>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-low border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center py-md px-margin-desktop max-w-max-width mx-auto gap-md">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-secondary">Deep Junior College</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">© 2026 Institutional Academic Portal. All rights reserved.</span>
+</div>
+<div class="flex gap-6">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://xeroxsysparth.my.canva.site/privacy-policy">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://xeroxsysparth.my.canva.site/terms-of-service">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="/support">Support Contact</a>
+</div>
+</div>
+</footer>
+<script src="/static/js/portal.js"></script>
+<script>
+        function togglePassword(id) {
+            const input = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.textContent = 'visibility_off';
+            } else {
+                input.type = 'password';
+                icon.textContent = 'visibility';
+            }
+        }
+    </script>
+</body></html>

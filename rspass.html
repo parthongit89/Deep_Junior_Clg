@@ -1,0 +1,240 @@
+<!DOCTYPE html><html class="light" lang="en" ><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Set New Password | University Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#10b981",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#131b2e",
+                    "tertiary-container": "#9ba2bb",
+                    "on-background": "#181c20",
+                    "tertiary": "#565e74",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "surface-tint": "#006c49",
+                    "background": "#f7f9ff",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "outline-variant": "#bbcabf",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#2170e4",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e8",
+                    "on-tertiary-container": "#31394d",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#4edea3",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#002113",
+                    "surface-variant": "#e0e3e8",
+                    "surface-bright": "#f7f9ff",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e5e8ee",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#3c4a42",
+                    "on-primary-fixed-variant": "#005236",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "surface": "#f7f9ff",
+                    "secondary": "#0058be",
+                    "primary-fixed": "#6ffbbe",
+                    "on-surface": "#181c20",
+                    "on-secondary-fixed": "#001a42",
+                    "inverse-surface": "#2d3135",
+                    "inverse-on-surface": "#eef1f6",
+                    "secondary-fixed": "#d8e2ff",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#4edea3",
+                    "surface-dim": "#d7dadf",
+                    "surface-container": "#ebeef3",
+                    "on-secondary-container": "#fefcff",
+                    "primary": "#006c49",
+                    "outline": "#6c7a71",
+                    "on-primary-container": "#00422b",
+                    "tertiary-fixed": "#dae2fd",
+                    "on-secondary-fixed-variant": "#004395",
+                    "surface-container-low": "#f1f4f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "gutter": "24px",
+                    "xl": "4rem",
+                    "md": "1.5rem",
+                    "lg": "2.5rem",
+                    "margin-mobile": "16px",
+                    "base": "4px",
+                    "xs": "0.5rem",
+                    "sm": "1rem",
+                    "max-width": "1280px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.03em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f7f9ff;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .focused-input:focus-within {
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+        }
+        .academic-shadow {
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline sticky top-0 z-50">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="flex items-center gap-xl">
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim tracking-tight">Deep Junior College</span>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="/home">Dashboard</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="/services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="/support">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-sm">
+<a href="/logout" class="bg-rose-50 text-rose-600 hover:bg-rose-100 px-4 py-2 rounded-lg font-bold text-label-md transition-all shadow-sm">Logout</a>
+<div class="flex items-center gap-xs">
+<a href="/profile" class="p-2 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 text-primary border-b-2 border-primary pb-1 font-bold">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center px-margin-mobile py-xl">
+<div class="w-full max-w-[480px]">
+<!-- Centered Card -->
+<div class="bg-white rounded-xl academic-shadow border border-outline-variant p-lg md:p-xl">
+<div class="text-center mb-lg">
+<div class="w-16 h-16 bg-primary-container/10 rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;wght&quot; 600;">lock_reset</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Set New Password</h1>
+<p class="font-body-md text-on-surface-variant">Create a secure password for your student account.</p>
+</div>
+<form class="space-y-md" id="passwordForm">
+<!-- Field 1: New Password -->
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface" for="new-password">New Password</label>
+<div class="relative flex items-center border border-outline-variant rounded-lg bg-white h-[48px] px-sm focused-input transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-xs">key</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-body-md text-on-surface placeholder:text-outline" id="new-password" placeholder="••••••••" type="password">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors" onclick="togglePassword('new-password', this)" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Field 2: Confirm New Password -->
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface" for="confirm-password">Confirm New Password</label>
+<div class="relative flex items-center border border-outline-variant rounded-lg bg-white h-[48px] px-sm focused-input transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-xs">verified_user</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-body-md text-on-surface placeholder:text-outline" id="confirm-password" placeholder="••••••••" type="password">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors" onclick="togglePassword('confirm-password', this)" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Password Requirements -->
+
+<!-- Primary Action -->
+<button class="w-full h-[48px] bg-primary-container hover:bg-opacity-90 text-white font-bold rounded-lg transition-all transform active:scale-[0.98] academic-shadow" type="submit">
+                        Update Password
+                    </button>
+<!-- Secondary Action -->
+<div class="text-center pt-sm">
+
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-lg px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="space-y-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface">Deep Junior College&nbsp;</span>
+<p class="text-on-surface-variant font-body-sm leading-relaxed">The unified digital gateway for academic excellence, providing secure access to institutional resources for students and faculty worldwide.</p>
+</div>
+<div class="flex flex-col gap-xs">
+<p class="font-label-md text-label-md text-on-surface font-bold mb-xs">Institutional Links</p>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="https://xeroxsysparth.my.canva.site/privacy-policy">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="https://xeroxsysparth.my.canva.site/terms-of-service">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="/support">Contact Support</a>
+</div>
+<div class="flex flex-col gap-sm md:items-end">
+<div class="flex gap-sm"
+<div class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high cursor-pointer transition-all">
+<span class="material-symbols-outlined text-lg">language</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high cursor-pointer transition-all">
+<span class="material-symbols-outlined text-lg">help</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant md:text-right mt-sm md:mt-auto">
+                    © 2026 University Institutional Portal. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script src="/static/js/portal.js"></script>
+<script>
+        function togglePassword(id, btn) {
+            const input = document.getElementById(id);
+            const icon = btn.querySelector('.material-symbols-outlined');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.textContent = 'visibility_off';
+            } else {
+                input.type = 'password';
+                icon.textContent = 'visibility';
+            }
+        }
+    </script>
+</body></html>

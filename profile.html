@@ -1,0 +1,399 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Student Profile | University Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#4edea3",
+                    "tertiary-container": "#9ba2bb",
+                    "on-surface": "#181c20",
+                    "surface": "#f7f9ff",
+                    "on-primary-container": "#00422b",
+                    "secondary-container": "#2170e4",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2d3135",
+                    "surface-container": "#ebeef3",
+                    "on-secondary-fixed": "#001a42",
+                    "surface-container-high": "#e5e8ee",
+                    "secondary": "#0058be",
+                    "outline-variant": "#bbcabf",
+                    "surface-dim": "#d7dadf",
+                    "on-primary-fixed": "#002113",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#004395",
+                    "tertiary-fixed": "#dae2fd",
+                    "inverse-primary": "#4edea3",
+                    "on-tertiary-fixed": "#131b2e",
+                    "surface-tint": "#006c49",
+                    "on-secondary-container": "#fefcff",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#eef1f6",
+                    "surface-container-low": "#f1f4f9",
+                    "on-primary-fixed-variant": "#005236",
+                    "primary": "#006c49",
+                    "outline": "#6c7a71",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "background": "#f7f9ff",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "on-surface-variant": "#3c4a42",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e8",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "primary-container": "#10b981",
+                    "on-background": "#181c20",
+                    "surface-bright": "#f7f9ff",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e0e3e8",
+                    "secondary-fixed": "#d8e2ff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#6ffbbe",
+                    "on-tertiary-container": "#31394d",
+                    "tertiary": "#565e74"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "1rem",
+                    "md": "1.5rem",
+                    "max-width": "1280px",
+                    "base": "4px",
+                    "lg": "2.5rem",
+                    "xs": "0.5rem",
+                    "xl": "4rem",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.03em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f7f9ff;
+            font-family: 'Inter', sans-serif;
+        }
+        .academic-card {
+            background: #ffffff;
+            border: 1px solid #E2E8F0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .interactive-card:hover {
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+            transform: translateY(-2px);
+        }
+        .profile-glow {
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4">
+        {% for category, message in messages %}
+          <div class="flex items-center gap-sm p-sm rounded-lg border text-body-sm shadow-md transition-all duration-300 {% if category == 'success' %}bg-green-50 border-green-200 text-green-800{% else %}bg-red-50 border-red-200 text-red-800{% endif %}">
+            <span class="material-symbols-outlined {% if category == 'success' %}text-green-600{% else %}text-red-600{% endif %}">
+              {% if category == 'success' %}check_circle{% else %}error{% endif %}
+            </span>
+            <span>{{ message }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-on-surface border-b border-outline-variant dark:border-outline fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-max-width mx-auto h-20">
+<div class="flex items-center gap-xl">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Deep Junior College</span>
+<nav class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="/home">Dashboard</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="/services">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="/support">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<a href="/logout" class="bg-rose-50 text-rose-600 hover:bg-rose-100 px-4 py-2 rounded-lg font-bold text-label-md transition-all shadow-sm">Logout</a>
+<div class="flex items-center gap-xs">
+<a href="/profile" class="p-2 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 text-primary border-b-2 border-primary pb-1 font-bold">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto min-h-screen">
+<!-- Profile Content Form -->
+<form action="/profile/update" method="POST" enctype="multipart/form-data" id="profileForm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Sidebar / Identity Card -->
+<aside class="lg:col-span-4 space-y-gutter">
+<div class="academic-card rounded-xl p-lg flex flex-col items-center text-center">
+<div class="relative mb-md">
+<!-- Clickable Profile Photo Upload Area -->
+<div class="relative group cursor-pointer" onclick="document.getElementById('profile_pic_input').click()">
+<div class="w-32 h-32 rounded-full border-4 border-primary-container p-1 overflow-hidden relative">
+<img alt="Student Profile" id="profile-display-img" class="w-full h-full object-cover rounded-full" src="{% if user.profile_pic and user.profile_pic != 'default.png' %}{{ url_for('static', filename='uploads/profile_pics/' + user.profile_pic) }}{% else %}https://i.supaimg.com/d0495ff2-7a2f-426d-a287-7b3b2861a5ee/7d15d7d5-b797-43e5-b7cc-98b57f9a0f00.png{% endif %}">
+<!-- Camera Hover Overlay (Shown on hover when active) -->
+<div id="camera-overlay" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-full">
+<span class="material-symbols-outlined text-white text-2xl">photo_camera</span>
+</div>
+</div>
+</div>
+<!-- Hidden File Input -->
+<input type="file" id="profile_pic_input" name="profile_pic" class="hidden" accept="image/*" onchange="previewImage(this)">
+<span class="absolute bottom-1 right-1 w-6 h-6 bg-primary border-4 border-white rounded-full"></span>
+</div>
+<p id="photo-upload-hint" class="text-xs text-primary font-bold hidden mb-sm animate-pulse">Click photo to upload new image</p>
+<h1 class="font-headline-md text-headline-md text-on-surface mb-xs">{{ user.name }}</h1>
+<div class="w-full mt-xl flex flex-col gap-sm">
+<button id="edit-profile-btn" type="button" onclick="toggleEditMode(true)" class="w-full bg-primary-container text-on-primary-container h-12 rounded-lg font-bold flex items-center justify-center gap-xs hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+                            Edit Profile
+                        </button>
+<a href="/profile/updatepassword" class="w-full bg-surface-container-lowest border border-outline-variant text-on-surface h-12 rounded-lg font-bold flex items-center justify-center gap-xs hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">lock_reset</span>
+                            Update Password
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Form Content -->
+<div class="lg:col-span-8 space-y-gutter">
+<!-- Personal Information Section -->
+<section class="academic-card rounded-xl overflow-hidden">
+<div class="bg-surface-container-low px-lg py-md border-b border-outline-variant flex justify-between items-center">
+<h2 class="font-headline-sm text-headline-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary">person</span>
+                            Personal Information
+                        </h2>
+<div id="form-actions" class="hidden flex gap-xs">
+<button type="submit" class="bg-[#10B981] hover:bg-[#059669] text-white px-4 py-2 rounded-lg font-bold text-xs shadow-md hover:shadow-lg transition-all">Save Changes</button>
+<button type="button" onclick="toggleEditMode(false)" class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg font-bold text-xs hover:bg-surface-container-highest transition-all">Cancel</button>
+</div>
+</div>
+
+<!-- View Mode (Visible by default) -->
+<div id="profile-view-container" class="p-lg grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface">Full Name</label>
+<div class="h-12 flex items-center px-md bg-surface-container-low border border-outline-variant rounded-lg text-on-surface-variant font-bold">
+                                {{ user.name }}
+                            </div>
+</div>
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface">Email Address</label>
+<div class="h-12 flex items-center px-md bg-surface-container-low border border-outline-variant rounded-lg text-on-surface-variant font-bold">
+                                {{ user.email }}
+                            </div>
+</div>
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface">Student ID / Seat No</label>
+<div class="h-12 flex items-center px-md bg-surface-container-low border border-outline-variant rounded-lg text-on-surface-variant">
+                                {{ user.username }}
+                            </div>
+</div>
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface">Gender</label>
+<div class="h-12 flex items-center px-md bg-surface-container-low border border-outline-variant rounded-lg text-on-surface-variant">
+                                {{ user.gender }}
+                            </div>
+</div>
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface">Contact Number</label>
+<div class="h-12 flex items-center px-md bg-surface-container-low border border-outline-variant rounded-lg text-on-surface-variant">
+                                {{ user.contact }}
+                            </div>
+</div>
+</div>
+
+<!-- Edit Mode (Hidden by default) -->
+<div id="profile-edit-container" class="p-lg grid grid-cols-1 md:grid-cols-2 gap-lg hidden">
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface">Full Name</label>
+<input type="text" name="name" value="{{ user.name }}" required class="w-full h-12 px-md border border-outline-variant rounded-lg bg-white text-on-surface font-body-md focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all outline-none">
+</div>
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface">Email Address</label>
+<input type="email" name="email" value="{{ user.email }}" required class="w-full h-12 px-md border border-outline-variant rounded-lg bg-white text-on-surface font-body-md focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all outline-none">
+</div>
+<div class="space-y-xs opacity-60">
+<label class="block font-label-md text-label-md text-on-surface">Student ID / Seat No (Read-Only)</label>
+<div class="h-12 flex items-center px-md bg-surface-container-low border border-outline-variant rounded-lg text-on-surface-variant">
+                                {{ user.username }}
+                            </div>
+</div>
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface">Gender</label>
+<select name="gender" class="w-full h-12 px-md border border-outline-variant rounded-lg bg-white text-on-surface font-body-md focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all outline-none">
+<option value="Male" {% if user.gender == 'Male' %}selected{% endif %}>Male</option>
+<option value="Female" {% if user.gender == 'Female' %}selected{% endif %}>Female</option>
+<option value="Other" {% if user.gender == 'Other' %}selected{% endif %}>Other</option>
+</select>
+</div>
+<div class="space-y-xs">
+<label class="block font-label-md text-label-md text-on-surface">Contact Number</label>
+<input type="text" name="contact" value="{{ user.contact }}" class="w-full h-12 px-md border border-outline-variant rounded-lg bg-white text-on-surface font-body-md focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all outline-none">
+</div>
+</div>
+</section>
+<!-- Academic Information Section -->
+<section class="academic-card rounded-xl overflow-hidden">
+
+
+</section>
+<!-- Upcoming Deadlines Asymmetric Feature -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+
+
+</section>
+</div>
+</div>
+</form>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl max-w-max-width mx-auto">
+<div class="md:col-span-1">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary dark:text-primary-fixed-dim">Deep Junior College</span>
+<p class="mt-md text-body-sm text-on-surface-variant">Elevating the academic experience through seamless digital integration.</p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-md">Resources</h4>
+<ul class="space-y-sm">
+<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Campus Map</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Library Access</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Academic Calendar</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-md">Legal</h4>
+<ul class="space-y-sm">
+<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Institutional Rights</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="https://xeroxsysparth.my.canva.site/privacy-policy">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-md">Contact</h4>
+<ul class="space-y-sm">
+<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline transition-all" href="/support">Contact Support</a></li>
+<li class="flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">phone</span>
+<span class="text-body-sm">+1 (555) UNIV-PRO</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop py-md border-t border-outline-variant/30 text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 University Academic Affairs. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        function toggleEditMode(isEdit) {
+            const viewContainer = document.getElementById('profile-view-container');
+            const editContainer = document.getElementById('profile-edit-container');
+            const formActions = document.getElementById('form-actions');
+            const editBtn = document.getElementById('edit-profile-btn');
+            const photoHint = document.getElementById('photo-upload-hint');
+            const cameraOverlay = document.getElementById('camera-overlay');
+
+            if (isEdit) {
+                viewContainer.classList.add('hidden');
+                editContainer.classList.remove('hidden');
+                formActions.classList.remove('hidden');
+                editBtn.classList.add('hidden');
+                if (photoHint) photoHint.classList.remove('hidden');
+                if (cameraOverlay) cameraOverlay.classList.remove('opacity-0');
+            } else {
+                viewContainer.classList.remove('hidden');
+                editContainer.classList.add('hidden');
+                formActions.classList.add('hidden');
+                editBtn.classList.remove('hidden');
+                if (photoHint) photoHint.classList.add('hidden');
+                if (cameraOverlay) cameraOverlay.classList.add('opacity-0');
+            }
+        }
+
+        function previewImage(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profile-display-img').src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+                button.style.opacity = '0.8';
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+                button.style.opacity = '1';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+                button.style.opacity = '1';
+            });
+        });
+
+        // Search Bar Focus Effect
+        const searchInput = document.querySelector('input[type="text"]');
+        if (searchInput) {
+            searchInput.addEventListener('focus', () => {
+                searchInput.parentElement.classList.add('scale-[1.02]');
+                searchInput.parentElement.style.transition = 'all 0.2s ease';
+            });
+            searchInput.addEventListener('blur', () => {
+                searchInput.parentElement.classList.remove('scale-[1.02]');
+            });
+        }
+    </script>
+
+
+</body></html>

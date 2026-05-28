@@ -1,0 +1,330 @@
+<!DOCTYPE html><html class="light" lang="en" ><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Support | Deep Junior College</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#ebeef3",
+                        "primary-fixed": "#6ffbbe",
+                        "inverse-primary": "#4edea3",
+                        "primary-fixed-dim": "#4edea3",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#181c20",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9ff",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "surface-variant": "#e0e3e8",
+                        "secondary": "#0058be",
+                        "surface-container-low": "#f1f4f9",
+                        "primary": "#006c49",
+                        "outline": "#6c7a71",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#006c49",
+                        "on-background": "#181c20",
+                        "surface-container-high": "#e5e8ee",
+                        "primary-container": "#10b981",
+                        "outline-variant": "#bbcabf",
+                        "on-secondary-container": "#fefcff",
+                        "inverse-on-surface": "#eef1f6",
+                        "on-secondary-fixed": "#001a42",
+                        "surface-container-highest": "#e0e3e8",
+                        "on-surface-variant": "#3c4a42",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f7f9ff",
+                        "on-tertiary-fixed": "#131b2e",
+                        "surface": "#f7f9ff",
+                        "inverse-surface": "#2d3135",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-primary-fixed": "#002113",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#00422b",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#2170e4",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#dae2fd",
+                        "tertiary-container": "#9ba2bb",
+                        "tertiary": "#565e74",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-tertiary-container": "#31394d",
+                        "on-primary-fixed-variant": "#005236",
+                        "surface-dim": "#d7dadf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "1rem",
+                        "gutter": "24px",
+                        "md": "1.5rem",
+                        "xs": "0.5rem",
+                        "xl": "4rem",
+                        "margin-desktop": "48px",
+                        "lg": "2.5rem",
+                        "margin-mobile": "16px",
+                        "base": "4px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.03em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f7f9ff; color: #181c20; font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hero-gradient { background: radial-gradient(circle at top right, #6ffbbe10, transparent), radial-gradient(circle at bottom left, #2170e405, transparent); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .accordion-item.active .accordion-content { max-height: 500px; }
+        .accordion-item.active .rotate-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface-container-lowest border-b border-outline-variant z-50">
+<div class="flex justify-between items-center h-16 max-w-max-width mx-auto px-margin-desktop">
+<div class="font-headline-md text-headline-md font-bold text-primary"> <a href="/home">Deep Junior College</a></div>
+<nav class="hidden md:flex items-center space-x-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-all duration-200" href="/home">Dashboard</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-all duration-200" href="/services">Services</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1 cursor-pointer transition-all duration-200" href="/support">Support</a>
+</nav>
+<div class="flex items-center space-x-md">
+<span class="material-symbols-outlined text-primary cursor-pointer">account_circle</span>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="hero-gradient py-xl px-margin-mobile md:px-margin-desktop text-center border-b border-outline-variant bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">How can we help you?</h1>
+<div class="relative max-w-2xl mx-auto">
+<span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full h-12 pl-xl pr-md rounded-xl border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-primary transition-all font-body-md text-body-md" placeholder="Search for help articles..." type="text">
+</div>
+<p class="mt-md font-body-sm text-body-sm text-on-surface-variant">Popular topics: Marks Verification, Semester Enrollment, Password Reset</p>
+</div>
+</section>
+<!-- Contact Channels -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Live Chat -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl shadow-[0_4px_12px_rgba(15,23,42,0.04)] hover:shadow-[0_10px_30px_rgba(15,23,42,0.15)] transition-all group">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-primary-fixed">chat</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">WhatsApp Chat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Quickest way to get answers for navigation issues. on +91 969977124</p>
+<div class="flex items-center text-primary font-label-md text-label-md">
+<span class="w-2 h-2 bg-primary-container rounded-full mr-xs"></span>
+                        Available: Mon-Fri, 9am - 6pm
+                    </div>
+</div>
+<!-- Email Support -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl shadow-[0_4px_12px_rgba(15,23,42,0.04)] hover:shadow-[0_10px_30px_rgba(15,23,42,0.15)] transition-all group">
+<div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-md group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-on-secondary-fixed">mail</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Email Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">For detailed inquiries regarding academic records.</p>
+<div class="text-on-surface-variant font-label-md text-label-md">
+                        Average Response: 24 Hours
+                    </div>
+</div>
+<!-- Phone Support -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl shadow-[0_4px_12px_rgba(15,23,42,0.04)] hover:shadow-[0_10px_30px_rgba(15,23,42,0.15)] transition-all group">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-md group-hover:bg-tertiary-container transition-colors">
+<span class="material-symbols-outlined text-on-tertiary-fixed">call</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Phone Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Urgent portal access or exam emergencies. on +91 969977124</p>
+<div class="text-on-surface-variant font-label-md text-label-md">
+                        
+                    </div>
+</div>
+</div>
+</section>
+<!-- FAQs Accordion -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-xl">
+<div class="md:w-1/3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Find quick solutions to common problems faced by students and faculty members.</p>
+<div class="mt-lg p-md bg-surface-container-lowest rounded-lg border border-outline-variant">
+<img class="w-full h-48 object-cover rounded-md mb-sm" data-alt="A group of diverse university students collaborating in a modern, brightly lit library setting. The scene is clean and professional with soft natural light streaming through large windows, reflecting the premium academic minimalism of the brand. Students are engaged with laptops and notebooks, suggesting a high-trust, focused educational environment with emerald green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE9Nb4WElW_oUHKjSYcP_pjNt5ngHGAzJ664aYsxZ4fzsPYrtkQ_s4tpSPJP8G5s0ID9RMneiuAbG49iQnBW4rYWCL3-0_k00sjuXbFQIxprEvnd4uwO5kMrbTslVbka8E-6yVgQw4VLiULnzTKHz35Sn2cxJ5Ex2OmSqZVmhLrFr_3TfPjmrMOzvZU22suKloro1TUbF5c5XcIPyXoCeXyCq1ndQWhIl7m-zfvsxarxfzJ1faawO_tURTmQGRIBNU0b1ZdZzTSJM">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Campus Updates</p>
+<p class="font-body-sm text-body-sm text-on-surface">New automated transcript delivery system is now live.</p>
+</div>
+</div>
+<div class="md:w-2/3 space-y-sm">
+<!-- FAQ Item 1 -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 active">
+<button class="w-full flex items-center justify-between p-md text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-headline-sm text-on-surface">Results &amp; Marksheets</span>
+<span class="material-symbols-outlined rotate-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content border-t border-outline-variant px-md bg-white">
+<div class="py-md font-body-md text-body-md text-on-surface-variant">
+<p class="mb-sm">Official marksheets are released within 15 days of result declaration. You can download the digital copy directly from the 'My Records' section. For physical copies, please submit an application at the registrar's office.</p>
+<ul class="list-disc pl-md space-y-base">
+<li class="">Digital Copy: Immediate</li>
+<li class="">Physical Transcript: 5-7 business days</li>
+<li class="">Correction Request: 10 business days</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300">
+<button class="w-full flex items-center justify-between p-md text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-headline-sm text-on-surface">Seat Number Issues</span>
+<span class="material-symbols-outlined rotate-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content border-t border-outline-variant px-md bg-white">
+<div class="py-md font-body-md text-body-md text-on-surface-variant">
+<p class="">Seat numbers are generated 48 hours before the examination. If your seat number is not appearing in the dashboard, please verify your enrollment status and payment confirmation. If both are clear, contact the Exam Cell immediately.</p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300">
+<button class="w-full flex items-center justify-between p-md text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-headline-sm text-on-surface">Technical Portal Access</span>
+<span class="material-symbols-outlined rotate-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content border-t border-outline-variant px-md bg-white">
+<div class="py-md font-body-md text-body-md text-on-surface-variant">
+<p class="">Ensure you are using the latest version of Chrome or Firefox. Clear your browser cache and cookies if the login screen is not loading correctly. Remember that multi-factor authentication (MFA) is mandatory for all portal logins.</p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300">
+<button class="w-full flex items-center justify-between p-md text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-headline-sm text-on-surface">Transcript Verification</span>
+<span class="material-symbols-outlined rotate-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content border-t border-outline-variant px-md bg-white">
+<div class="py-md font-body-md text-body-md text-on-surface-variant">
+<p class="">Third-party agencies can verify transcripts through the 'External Verification' portal using the unique 16-digit certificate ID found at the bottom of the transcript.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-low full-width relative border-t border-outline-variant dark:border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-xl max-w-max-width mx-auto">
+<!-- Identity -->
+<div class="space-y-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="school">school</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface">Deep Junior College</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">
+                    Empowering students and faculty through high-performance digital infrastructure. The official gateway for State Board verification and record management.
+                </p>
+<div class="space-y-2">
+<p class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="call">call</span>
+                        Helpline: +91 8000 20500
+                    </p>
+<p class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="location_on">location_on</span>
+<span class="">Sarawali Road Near Dwarkesh Nagar,<br>Boisar 401501</span>
+</p>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface mb-md">Quick Links</h5>
+<ul class="space-y-sm">
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/home">Home</a></li>
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/registerform">Register&nbsp;</a></li>
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/login">Student Login</a></li>
+</ul>
+</div>
+<!-- Support & Policies -->
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface mb-md">Support &amp; Policies</h5>
+<ul class="space-y-sm">
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/revaluation">Revaluation Request</a></li>
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="https://xeroxsysparth.my.canva.site/privacy-policy">Privacy Policy</a></li>
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="https://xeroxsysparth.my.canva.site/terms-of-service">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-outline-variant px-margin-desktop py-md">
+<div class="max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-on-surface-variant font-body-sm text-body-sm text-center md:text-left">
+                    © 2026 Institutional Deep Junior College. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+            });
+
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Initialize first accordion as active
+        window.addEventListener('DOMContentLoaded', () => {
+            const firstItem = document.querySelector('.accordion-item');
+            if(firstItem) firstItem.classList.add('active');
+        });
+    </script>
+
+
+</body></html>

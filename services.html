@@ -1,0 +1,309 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | College Portal</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#2170e4",
+                        "on-primary-fixed-variant": "#005236",
+                        "on-tertiary-fixed": "#131b2e",
+                        "surface-bright": "#f7f9ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d7dadf",
+                        "surface": "#f7f9ff",
+                        "on-tertiary-container": "#31394d",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#eef1f6",
+                        "inverse-surface": "#2d3135",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-container-highest": "#e0e3e8",
+                        "primary": "#006c49",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#10b981",
+                        "tertiary-container": "#9ba2bb",
+                        "primary-fixed-dim": "#4edea3",
+                        "surface-tint": "#006c49",
+                        "surface-container": "#ebeef3",
+                        "secondary": "#0058be",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#181c20",
+                        "surface-variant": "#e0e3e8",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#dae2fd",
+                        "outline": "#6c7a71",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "outline-variant": "#bbcabf",
+                        "on-surface-variant": "#3c4a42",
+                        "tertiary": "#565e74",
+                        "on-background": "#181c20",
+                        "on-secondary-fixed": "#001a42",
+                        "inverse-primary": "#4edea3",
+                        "background": "#f7f9ff",
+                        "primary-fixed": "#6ffbbe",
+                        "surface-container-high": "#e5e8ee",
+                        "on-primary-container": "#00422b",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-primary-fixed": "#002113",
+                        "on-secondary-container": "#fefcff",
+                        "surface-container-low": "#f1f4f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "lg": "2.5rem",
+                        "base": "4px",
+                        "xs": "0.5rem",
+                        "md": "1.5rem",
+                        "margin-mobile": "16px",
+                        "sm": "1rem",
+                        "max-width": "1280px",
+                        "xl": "4rem",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.03em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #ffffff;
+            color: #181c20;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card-shadow {
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+        }
+        .service-card-shadow:hover {
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center h-16 w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface"><span style="font-size: 24px;" class="">&nbsp; &nbsp;Deep Junior College</span></div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 text-label-md font-label-md" href="/home">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold text-label-md font-label-md" href="/services">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 text-label-md font-label-md" href="/support">Support</a>
+</nav>
+<div class="flex items-center gap-sm">
+<a href="/logout" class="bg-rose-50 text-rose-600 hover:bg-rose-100 px-4 py-2 rounded-lg font-bold text-label-md transition-all shadow-sm">Logout</a>
+<div class="flex items-center gap-xs">
+<a href="/profile" class="p-2 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 text-primary border-b-2 border-primary pb-1 font-bold">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="max-w-3xl mb-xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-xs md:text-display-lg md:font-display-lg">Available Board Services</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+                    Select a service to proceed with your academic records or certifications. Our streamlined digital portal ensures secure access to all institutional credentials.
+                </p>
+</div>
+<!-- Bento Grid of Service Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md" id="services">
+<!-- Card 1: Prelim Examination Records -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-md service-card-shadow transition-all duration-300 flex flex-col h-full">
+<div class="flex items-start justify-between mb-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="history_edu">history_edu</span>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-xs py-0.5 rounded-full text-label-sm font-label-sm">NEW</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Prelim Examination Records</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-md flex-grow">
+                        Access and download your preliminary examination marksheets, answer sheets, progress cards, and revaluation tickets.
+                    </p>
+<div class="flex flex-col gap-3 pt-md border-t border-outline-variant">
+    <div class="space-y-1">
+        <span class="text-xs font-semibold uppercase tracking-wider text-primary">10th Prelim Standard:</span>
+        <div class="grid grid-cols-2 gap-2">
+            <a href="/services/fetch_10_ans" class="bg-white border border-outline-variant py-2 px-3 rounded-lg text-center font-bold text-xs hover:bg-primary-container hover:text-white transition-all">Answer Sheet</a>
+            <a href="/services/fetch_10_mark" class="bg-white border border-outline-variant py-2 px-3 rounded-lg text-center font-bold text-xs hover:bg-primary-container hover:text-white transition-all">Marksheet</a>
+            <a href="/services/fetch_10_progress" class="bg-white border border-outline-variant py-2 px-3 rounded-lg text-center font-bold text-xs hover:bg-primary-container hover:text-white transition-all">Progress Card</a>
+            <a href="/services/fetch_10_rev" class="bg-white border border-outline-variant py-2 px-3 rounded-lg text-center font-bold text-xs hover:bg-primary-container hover:text-white transition-all">Revaluation</a>
+        </div>
+    </div>
+    <div class="space-y-1 mt-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-secondary">12th Prelim Standard:</span>
+        <div class="grid grid-cols-2 gap-2">
+            <a href="/services/fetch_12_ans" class="bg-white border border-outline-variant py-2 px-3 rounded-lg text-center font-bold text-xs hover:bg-primary-container hover:text-white transition-all">Answer Sheet</a>
+            <a href="/services/fetch_12_mark" class="bg-white border border-outline-variant py-2 px-3 rounded-lg text-center font-bold text-xs hover:bg-primary-container hover:text-white transition-all">Marksheet</a>
+            <a href="/services/fetch_12_progress" class="bg-white border border-outline-variant py-2 px-3 rounded-lg text-center font-bold text-xs hover:bg-primary-container hover:text-white transition-all">Progress Card</a>
+            <a href="/services/fetch_12_rev" class="bg-white border border-outline-variant py-2 px-3 rounded-lg text-center font-bold text-xs hover:bg-primary-container hover:text-white transition-all">Revaluation</a>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Card 2: Board Certifications -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-md service-card-shadow transition-all duration-300 flex flex-col h-full">
+<div class="flex items-start justify-between mb-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="verified">verified</span>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-xs py-0.5 rounded-full text-label-sm font-label-sm">Official</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Board Certifications</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-md flex-grow">
+                        Request original board certificates, migration documents, and authenticated transcripts directly from the university examination board.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-sm pt-md border-t border-outline-variant mt-auto">
+<a href="#" class="flex-1 bg-primary-container text-white flex items-center justify-center gap-xs py-3 px-sm rounded-lg font-bold hover:opacity-90 transition-all group">
+<span class="text-label-md font-label-md">10th Board Certificate</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a href="#" class="flex-1 bg-primary-container text-white flex items-center justify-center gap-xs py-3 px-sm rounded-lg font-bold hover:opacity-90 transition-all group">
+<span class="text-label-md font-label-md">12th Board Certificate</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Informational Graphic Section -->
+<div class="mt-xl grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="md:col-span-2 relative h-[300px] rounded-xl overflow-hidden group">
+<img alt="Academic library with students studying" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A bright and airy university library with modern wooden shelving and students engaged in quiet study. The scene is bathed in natural sunlight from large windows, creating a peaceful and high-trust academic environment. The color palette is composed of soft whites, light woods, and subtle emerald green accents, reflecting a premium minimalist institutional aesthetic. The overall mood is focused, professional, and intellectually rigorous." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKrK3fTzsr-9c0NVoiyJl2ZRDQrN32xqsoKTnnZKaMu4jehAhEuPh9peuG8dUfNIN1C5KXGXVeD2FzVZyIbk_45VWt5-iL2BzgreycwsZxVDmKlTmnSILIStJYzaWPdqRVsH7RrbKC9_v0soNtuRjPZLctYjjdlS1Sb_IQAjwf6TfSFiGqM6Y4qiPsixZ3lI80XQpNS8fY4dZ4ao0R-j7CxHOMb4B1Z_Dx1IHlHgsXaZufc8upNGf2CWEZLCJm7-tJKJlb52GmQKk">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-md">
+<div class="text-white">
+<p class="font-headline-sm text-headline-sm">Secured Digital Vault</p>
+<p class="text-body-sm opacity-90">All your certificates are encrypted and verifiable via university hash protocols.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-md flex flex-col justify-center border border-outline-variant">
+<div class="mb-sm text-primary">
+<span class="material-symbols-outlined text-[48px]" data-icon="support_agent">support_agent</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Need Assistance?</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-md">Our academic support team is available Mon-Fri for any document verification issues.</p>
+<a class="text-primary font-bold text-label-md font-label-md flex items-center gap-xs hover:underline transition-all" href="#">
+                        Contact Support Office
+                        <span class="material-symbols-outlined text-[18px]" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-low full-width relative border-t border-outline-variant dark:border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-xl max-w-max-width mx-auto">
+<!-- Identity -->
+<div class="space-y-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="school">school</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface">Deep Junior College</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">
+                    Empowering students and faculty through high-performance digital infrastructure. The official gateway for State Board verification and record management.
+                </p>
+<div class="space-y-2">
+<p class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="call">call</span>
+                        Helpline: +91 8000 20500
+                    </p>
+<p class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="location_on">location_on</span>
+<span class="">Sarawali Road Near Dwarkesh Nagar,<br>Boisar 401501</span>
+</p>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface mb-md">Quick Links</h5>
+<ul class="space-y-sm">
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/home">Home</a></li>
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/registerform">Register&nbsp;</a></li>
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/login">Student Login</a></li>
+</ul>
+</div>
+<!-- Support & Policies -->
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface mb-md">Support &amp; Policies</h5>
+<ul class="space-y-sm">
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/revaluation">Revaluation Request</a></li>
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="https://xeroxsysparth.my.canva.site/privacy-policy">Privacy Policy</a></li>
+<li class=""><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="https://xeroxsysparth.my.canva.site/terms-of-service">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-outline-variant px-margin-desktop py-md">
+<div class="max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-on-surface-variant font-body-sm text-body-sm text-center md:text-left">
+                    © 2026 Institutional Deep Junior College. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script src="/static/js/portal.js"></script>
+<script>
+        // Simple micro-interaction for button feedback
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+    </script>
+</body></html>

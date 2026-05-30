@@ -41,4 +41,4 @@ Follow these steps to get your development environment running:
 
 1. **Project Brief**
    ```link
-   https://canva.link/w4khbacldlnodqk)
+   https://canva.link/w4khbacldlnodqk

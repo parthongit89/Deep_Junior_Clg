@@ -1,10 +1,10 @@
-# Deep_Junior_Clg 🎓
+# Deep_Junior_Clg 
 
 An educational platform designed to bring **fairness, transparency, and trust** to the Indian education system. This platform provides a secure and verifiable ecosystem for students, colleges, and board authorities to manage and authenticate critical academic documents.
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 * **Valid Marksheet Verification:** Instantly verify the authenticity of student marksheets to prevent academic fraud.
 * **Transparent Answer Sheet Access:** Allows students to view scanned copies of their evaluated answer sheets, promoting grading transparency.
@@ -13,7 +13,7 @@ An educational platform designed to bring **fairness, transparency, and trust** 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Frontend:** HTML5, CSS3, JavaScript (or React.js / Vue.js if applicable)
 * **Backend:** Node.js / Python Django (or whatever you are using)
@@ -22,7 +22,7 @@ An educational platform designed to bring **fairness, transparency, and trust** 
 
 ---
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 * You have installed Node.js (v18 or higher) / Python (v3.x)
@@ -30,7 +30,7 @@ Before you begin, ensure you have met the following requirements:
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 Follow these steps to get your development environment running:
 

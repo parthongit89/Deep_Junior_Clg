@@ -38,3 +38,4 @@ Follow these steps to get your development environment running:
    ```bash
    git clone [https://github.com/parthongit89/Deep_Junior_Clg.git](https://github.com/parthongit89/Deep_Junior_Clg.git)
    cd Deep_Junior_Clg
+   https://canva.link/w4khbacldlnodqk

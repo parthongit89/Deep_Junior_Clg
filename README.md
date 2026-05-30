@@ -39,6 +39,6 @@ Follow these steps to get your development environment running:
    git clone [https://github.com/parthongit89/Deep_Junior_Clg.git](https://github.com/parthongit89/Deep_Junior_Clg.git)
    cd Deep_Junior_Clg
 
-1. **Project Brief **
+1. **Project Brief**
    ```link
    https://canva.link/w4khbacldlnodqk)

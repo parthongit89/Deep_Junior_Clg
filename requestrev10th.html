@@ -165,11 +165,11 @@
 <!-- Seat Number -->
 <div class="flex flex-col gap-xs">
 <label class="font-label-md text-label-md text-on-surface-variant" for="seat-no">Seat No</label>
-<input class="h-12 w-full px-md rounded border border-outline-variant bg-white focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all outline-none text-on-surface font-body-md" id="seat-no" placeholder="Enter your 7-digit seat number" required="" type="text">
+<input class="h-12 w-full px-md rounded border border-outline-variant bg-white focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all outline-none text-on-surface font-body-md" id="seat-no" placeholder="e.g. 1000001 or M005026" required="" type="text" pattern="[Mm]\d{5,6}|\d{7}" title="Please enter a valid seat number (e.g. 1000001 or M005026)" maxlength="7">
 </div>
 <!-- Password -->
 <div class="flex flex-col gap-xs">
-<label class="font-label-md text-label-md text-on-surface-variant" for="password">Password</label>
+<label class="font-label-md text-label-md text-on-surface-variant" for="password">Exam Password</label>
 <div class="relative">
 <input class="h-12 w-full px-md rounded border border-outline-variant bg-white focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all outline-none text-on-surface font-body-md" id="password" placeholder="Enter examination password" required="" type="password">
 <button class="absolute right-md top-1/2 -translate-y-1/2 text-on-surface-variant" type="button">
@@ -234,7 +234,7 @@
 <div>
 <h3 class="font-label-md text-label-md text-on-surface font-bold mb-md">Quick Links</h3>
 <ul class="space-y-sm">
-<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Examination Portal</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="/services">Examination Portal</a></li>
 
 
 <li class=""></li>
@@ -246,7 +246,7 @@
 <ul class="space-y-sm">
 <li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="/support">Contact Support</a></li>
 <li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://xeroxsysparth.my.canva.site/privacy-policy">Privacy Policy</a></li>
-<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://xeroxsysparth.my.canva.site/terms-of-service">Terms of Service</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://xeroxsysparth.my.canva.site/terms-conditions">Terms of Service</a></li>
 
 </ul>
 </div>
@@ -254,13 +254,13 @@
 <div>
 <h3 class="font-label-md text-label-md text-on-surface font-bold mb-md">Connect</h3>
 <div class="flex gap-sm">
-<a class="w-10 h-10 rounded bg-white border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<a class="w-10 h-10 rounded bg-white border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="/support">
 <span class="material-symbols-outlined" data-icon="mail">mail</span>
 </a>
-<a class="w-10 h-10 rounded bg-white border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<a class="w-10 h-10 rounded bg-white border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="/support">
 <span class="material-symbols-outlined" data-icon="help_center">help_center</span>
 </a>
-<a class="w-10 h-10 rounded bg-white border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<a class="w-10 h-10 rounded bg-white border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="/support">
 <span class="material-symbols-outlined" data-icon="info">info</span>
 </a>
 </div>

@@ -127,18 +127,16 @@
 <div class="flex justify-between items-center w-full max-w-[1280px] mx-auto px-margin-desktop h-16">
 <div class="font-headline-md text-headline-md text-primary font-bold">Deep Junior College</div>
 <nav class="hidden md:flex items-center gap-gutter">
-<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Dashboard</a>
-<a class="text-primary font-bold border-b-2 border-primary pb-2 font-label-md" href="#">Services</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="/home">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-2 font-label-md" href="/services">Services</a>
 
 
-<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Support</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="/support">Support</a>
 </nav>
 <div class="flex items-center gap-sm">
 <button class="p-xs text-on-surface-variant hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150">
 </button>
-<button class="p-xs text-on-surface-variant hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150">
-<span class="material-symbols-outlined">account_circle</span>
-</button>
+<button class="material-symbols-outlined text-primary p-xs hover:bg-surface-container rounded-full transition-colors"><a href="/profile">account_circle</a></button>
 </div>
 </div>
 </header>
@@ -159,11 +157,11 @@
 <!-- Seat No Input -->
 <div class="flex flex-col gap-xs">
 <label class="font-label-md text-label-md text-on-surface" for="seat_no">Seat No</label>
-<input class="h-12 w-full px-md rounded-lg border border-outline-variant bg-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all font-body-md text-on-background" id="seat_no" maxlength="7" name="seat_no" pattern="\d{7}" placeholder="7-digit seat number" required="" type="text">
+<input class="h-12 w-full px-md rounded-lg border border-outline-variant bg-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all font-body-md text-on-background" id="seat_no" maxlength="7" name="seat_no" pattern="[Mm]\d{5,6}|\d{7}" placeholder="e.g. 1000001 or M005026" required="" type="text" title="Please enter a valid seat number (e.g. 1000001 or M005026)">
 </div>
 <!-- Password Input -->
 <div class="flex flex-col gap-xs">
-<label class="font-label-md text-label-md text-on-surface" for="password">Password</label>
+<label class="font-label-md text-label-md text-on-surface" for="password">Exam Password</label>
 <div class="relative">
 <input class="h-12 w-full px-md rounded-lg border border-outline-variant bg-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all font-body-md text-on-background" id="password" name="password" placeholder="Enter portal password" required="" type="password">
 <button class="absolute right-3 top-3 text-on-surface-variant hover:text-primary transition-colors" type="button">
@@ -195,10 +193,10 @@
 <div class="w-full max-w-[1280px] mx-auto px-margin-desktop py-lg">
 
 <div class="flex flex-col md:flex-row justify-between items-center gap-sm pt-md border-t border-outline-variant">
-<p class="font-body-sm text-on-surface-variant">© 2024 Institutional Board of Services. All academic rights reserved.</p>
+<p class="font-body-sm text-on-surface-variant">© 2026 Institutional Board of Services. All academic rights reserved.</p>
 <div class="flex gap-md">
 <a class="text-on-surface-variant font-body-sm hover:text-primary underline" href="https://xeroxsysparth.my.canva.site/privacy-policy">Privacy Policy</a>
-<a class="text-on-surface-variant font-body-sm hover:text-primary underline" href="https://xeroxsysparth.my.canva.site/terms-of-service">Terms of Service</a>
+<a class="text-on-surface-variant font-body-sm hover:text-primary underline" href="https://xeroxsysparth.my.canva.site/terms-conditions">Terms of Service</a>
 </div>
 </div>
 </div>

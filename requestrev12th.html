@@ -135,14 +135,14 @@
 <div class="flex justify-between items-center w-full max-w-[1280px] mx-auto px-margin-desktop h-16">
 <div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed font-bold">Deep Juniour&nbsp; College</div>
 <nav class="hidden md:flex gap-md items-center">
-<a class="text-on-surface-variant dark:text-surface-variant font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#">Dashboard</a>
-<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-2 transition-colors duration-200" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" href="/home">Dashboard</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-2 transition-colors duration-200" href="/services">Services</a>
 
 
-<a class="text-on-surface-variant dark:text-surface-variant font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#">Support</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" href="/support">Support</a>
 </nav>
 <div class="flex items-center gap-sm">
-<button class="material-symbols-outlined text-primary p-xs hover:bg-surface-container rounded-full transition-colors">account_circle</button>
+<button class="material-symbols-outlined text-primary p-xs hover:bg-surface-container rounded-full transition-colors"><a href="/profile">account_circle</a></button>
 </div>
 </div>
 </header>
@@ -168,11 +168,11 @@
 <!-- Seat Number Field -->
 <div class="space-y-base">
 <label class="font-label-md text-label-md text-on-surface block px-base" for="seat_no">Seat No</label>
-<input class="w-full h-[48px] bg-white border border-outline-variant rounded-lg px-md text-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/10 outline-none transition-all placeholder:text-on-surface-variant/50" id="seat_no" name="seat_no" placeholder="Enter your 7-digit seat number" type="text">
+<input class="w-full h-[48px] bg-white border border-outline-variant rounded-lg px-md text-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/10 outline-none transition-all placeholder:text-on-surface-variant/50" id="seat_no" name="seat_no" placeholder="e.g. 1000001 or M005026" type="text" pattern="[Mm]\d{5,6}|\d{7}" title="Please enter a valid seat number (e.g. 1000001 or M005026)" maxlength="7" required>
 </div>
 <!-- Password Field -->
 <div class="space-y-base">
-<label class="font-label-md text-label-md text-on-surface block px-base" for="password">Password</label>
+<label class="font-label-md text-label-md text-on-surface block px-base" for="password">Exam Password</label>
 <div class="relative">
 <input class="w-full h-[48px] bg-white border border-outline-variant rounded-lg px-md pr-xl text-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/10 outline-none transition-all placeholder:text-on-surface-variant/50" id="password" name="password" placeholder="Enter examination password" type="password">
 <button class="absolute right-md top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors" onclick="togglePassword()" type="button">
@@ -186,8 +186,7 @@
 <div class="relative">
 <select class="w-full h-[48px] bg-white border border-outline-variant rounded-lg px-md text-body-md appearance-none focus:border-secondary focus:ring-2 focus:ring-secondary/10 outline-none transition-all cursor-pointer" id="subject" name="subject">
 <option disabled="" selected="" value="">Choose examination subject</option>
-<option value="maths-1">Maths Part 1</option>
-<option value="maths-2">Maths Part 2</option>
+<option value="maths">Maths</option>
 <option value="physics">Physics</option>
 <option value="chemistry">Chemistry</option>
 <option value="english">English</option>
@@ -229,7 +228,7 @@
 <div class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed"><h2 class="font-headline-sm text-headline-sm text-primary mb-md" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; margin: 0px 0px 1.5rem; --tw-text-opacity: 1; color: rgb(0, 108, 73); outline: none !important; box-shadow: none !important;">Deep Junior College</h2></div>
 <div class="flex flex-wrap justify-center gap-md">
 <a class="text-on-surface-variant dark:text-surface-variant font-body-sm hover:text-primary dark:hover:text-primary-fixed underline transition-opacity duration-200" href="https://xeroxsysparth.my.canva.site/privacy-policy">Privacy Policy</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-body-sm hover:text-primary dark:hover:text-primary-fixed underline transition-opacity duration-200" href="https://xeroxsysparth.my.canva.site/terms-of-service">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm hover:text-primary dark:hover:text-primary-fixed underline transition-opacity duration-200" href="https://xeroxsysparth.my.canva.site/terms-conditions">Terms of Service</a>
 
 
 <a class="text-on-surface-variant dark:text-surface-variant font-body-sm hover:text-primary dark:hover:text-primary-fixed underline transition-opacity duration-200" href="/support">Contact Support</a>

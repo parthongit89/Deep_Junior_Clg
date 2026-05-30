@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Portal | Institutional Services</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#dae2fd",
+            "on-secondary-fixed-variant": "#004395",
+            "on-tertiary": "#ffffff",
+            "background": "#f7f9ff",
+            "outline": "#6c7a71",
+            "on-primary-container": "#00422b",
+            "on-surface-variant": "#3c4a42",
+            "on-secondary": "#ffffff",
+            "on-surface": "#181c20",
+            "tertiary": "#565e74",
+            "primary-fixed-dim": "#4edea3",
+            "on-background": "#181c20",
+            "tertiary-container": "#9ba2bb",
+            "secondary": "#0058be",
+            "surface-tint": "#006c49",
+            "on-primary-fixed": "#002113",
+            "on-secondary-fixed": "#001a42",
+            "on-primary": "#ffffff",
+            "surface-container": "#ebeef3",
+            "on-primary-fixed-variant": "#005236",
+            "surface-variant": "#e0e3e8",
+            "error": "#ba1a1a",
+            "surface-container-high": "#e5e8ee",
+            "primary-fixed": "#6ffbbe",
+            "secondary-fixed": "#d8e2ff",
+            "outline-variant": "#bbcabf",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-container": "#fefcff",
+            "inverse-primary": "#4edea3",
+            "surface-container-low": "#f1f4f9",
+            "surface-dim": "#d7dadf",
+            "surface-container-highest": "#e0e3e8",
+            "secondary-fixed-dim": "#adc6ff",
+            "on-error-container": "#93000a",
+            "tertiary-fixed-dim": "#bec6e0",
+            "inverse-surface": "#2d3135",
+            "surface-bright": "#f7f9ff",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "secondary-container": "#2170e4",
+            "inverse-on-surface": "#eef1f6",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary": "#10b981",
+            "on-tertiary-container": "#31394d",
+            "primary-container": "#10b981",
+            "surface": "#f7f9ff",
+            "on-tertiary-fixed": "#131b2e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "max-width": "1280px",
+            "xs": "0.5rem",
+            "md": "1.5rem",
+            "xl": "4rem",
+            "sm": "1rem",
+            "lg": "2.5rem",
+            "base": "4px",
+            "gutter": "24px",
+            "margin-mobile": "16px",
+            "margin-desktop": "48px"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Inter"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+            "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+            "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.03em", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500"}],
+            "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    
+    /* Animation Utility Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .reveal-delay-1 { transition-delay: 150ms; }
+    .reveal-delay-2 { transition-delay: 300ms; }
+    .reveal-delay-3 { transition-delay: 450ms; }
+
+    /* Parallax Effect */
+    .parallax-layer {
+      will-change: transform;
+      transition: transform 0.1s ease-out;
+    }
+
+    /* Hover States */
+    .hover-lift {
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Gradient Overlays */
+    .premium-mask {
+      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4">
+        {% for category, message in messages %}
+          <div class="flex items-center gap-sm p-sm rounded-lg border text-body-sm shadow-md transition-all duration-300 {% if category == 'success' %}bg-green-50 border-green-200 text-green-800{% else %}bg-red-50 border-red-200 text-red-800{% endif %}">
+            <span class="material-symbols-outlined {% if category == 'success' %}text-green-600{% else %}text-red-600{% endif %}">
+              {% if category == 'success' %}check_circle{% else %}error{% endif %}
+            </span>
+            <span>{{ message }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/50 transition-all duration-300" id="main-header">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-max-width mx-auto h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Deep Junior College</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="/home">Home</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="/services">Services</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="/support">Support</a>
+</nav>
+<div class="flex items-center gap-md">
+{% if session.get('user_id') %}
+<a href="/logout" class="bg-rose-50 text-rose-600 hover:bg-rose-100 px-4 py-2 rounded-lg font-bold text-label-md transition-all shadow-sm">Logout</a>
+<div class="flex items-center gap-xs">
+<a href="/profile" class="p-2 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 text-primary border-b-2 border-primary pb-1 font-bold">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</a>
+</div>
+{% else %}
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="/login">Login</a>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md font-bold hover:brightness-110 transition-all shadow-sm" href="/register">Register</a>
+{% endif %}
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-surface px-margin-mobile md:px-margin-desktop py-xl md:py-32 overflow-hidden">
+<div class="max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-lg items-center relative z-10">
+<div class="space-y-md reveal active">
+<h1 class="font-display-lg text-[40px] md:text-display-lg text-on-surface leading-tight">
+          Digital Examination &amp; <br class="hidden md:block"/>
+<span class="text-primary">Board Verification</span> Services
+        </h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-lg">
+          Providing high-trust academic infrastructure for students and institutions. Seamlessly access records, verify certifications, and manage examination data with premium institutional security.
+        </p>
+<div class="flex flex-wrap gap-md pt-xs">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-headline-sm text-headline-sm font-bold flex items-center gap-2 hover:brightness-110 shadow-md transition-all" href="{% if session.get('user_id') %}/services{% else %}/register{% endif %}">
+            Get Started
+            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative hidden md:block reveal reveal-delay-2 active">
+<div class="absolute -inset-4 bg-primary/10 rounded-3xl blur-3xl parallax-layer" id="hero-blob"></div>
+<img alt="Institutional Excellence" class="rounded-2xl shadow-2xl relative z-10 w-full h-[500px] object-cover contrast-[1.05] parallax-layer" id="hero-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9u9qVcaKIfzjQ6Y6_QnKfK6ED3KwtZvkuodlVj0ocmFUWAoeaBxHM70XM25wuhADiGJt_qL8ZWlnMltbeAr61uvQSgHycUgC1og1fqY-C2__81-Amkm-ZQdS6XyIdJZFwX4ybge3G1n5lr2juz41ozTALRWnKPupqZWrvEG4vNAoXZTY-O1tcKvvSf3KtJKs3YB6_8Sx9kkZk5ZGs9nb4vaqVJ6an7c1EXAfsYTA7MnEpB-sO_9Yixrx_VeIsVk87RecYYkFtE4g"/>
+</div>
+</div>
+<!-- Atmospheric Pattern -->
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none parallax-layer" data-speed="0.05">
+<svg class="h-full w-full" viewbox="0 0 100 100">
+<defs>
+<pattern height="10" id="grid" patternunits="userSpaceOnUse" width="10">
+<path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100" width="100"></rect>
+</svg>
+</div>
+</section>
+<!-- Onboarding Cards -->
+<section class="px-margin-mobile md:px-margin-desktop py-lg max-w-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Login Card -->
+<a class="group relative bg-surface-container-lowest border border-outline-variant p-lg rounded-xl hover-lift reveal" href="{% if session.get('user_id') %}/services{% else %}/login{% endif %}">
+<div class="flex items-start justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="login">login</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Student Login</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Access your student dashboard, view exam results, and manage your academic profile.</p>
+</div>
+<div class="bg-secondary-container/10 p-4 rounded-full group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_right_alt">arrow_right_alt</span>
+</div>
+</div>
+</a>
+<!-- Register Card -->
+<a class="group relative bg-primary-container p-lg rounded-xl hover-lift reveal reveal-delay-1" href="{% if session.get('user_id') %}/services{% else %}/register{% endif %}">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="how_to_reg">how_to_reg</span>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-on-primary-container text-4xl mb-4" data-icon="person_add">person_add</span>
+<h3 class="font-headline-md text-headline-md text-on-primary-container mb-2">New Registration</h3>
+<p class="text-on-primary-container/80 font-body-md text-body-md mb-6">Register for upcoming board examinations and create your permanent student identity record.</p>
+<div class="flex items-center gap-4">
+<span class="bg-white text-primary px-6 py-2 rounded-lg font-label-md text-label-md font-bold inline-block">Start Enrollment</span>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- Service Matrix -->
+<section class="px-margin-mobile md:px-margin-desktop py-xl bg-surface-container-low/30" id="services">
+<div class="max-w-max-width mx-auto">
+<div class="text-center mb-xl reveal">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Services</h2>
+<div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Column 1 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant hover:border-primary/50 transition-all hover-lift reveal">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Pre-Examination Records</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-md">Secure management of enrollment data, subject selection, and internal assessment grades prior to final certification.</p>
+<ul class="space-y-2 text-on-surface-variant font-label-md text-label-md mb-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Enrollment Validation</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Subject Correction</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Internal Mark Sync</li>
+</ul>
+<div class="flex flex-col gap-2 mt-md pt-sm border-t border-outline-variant/30">
+<a class="bg-primary/5 text-primary border border-primary/20 px-6 py-3 rounded-lg font-label-md text-label-md font-bold flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all" href="/services">
+              10th Prelims Exam
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="bg-primary/5 text-primary border border-primary/20 px-6 py-3 rounded-lg font-label-md text-label-md font-bold flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all" href="/services">
+              12th Prelims Exam
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Column 2 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant hover:border-primary/50 transition-all hover-lift reveal reveal-delay-1">
+<div class="w-12 h-12 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Verified Certifications</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-md">Request and track digital copies of your graduation certificates and marksheets with official state verification.</p>
+<ul class="space-y-2 text-on-surface-variant font-label-md text-label-md mb-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Duplicate Certificates</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Migration Certificates</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Authentication API</li>
+</ul>
+<div class="flex flex-col gap-2 mt-md pt-sm border-t border-outline-variant/30">
+<a class="bg-primary/5 text-primary border border-primary/20 px-6 py-3 rounded-lg font-label-md text-label-md font-bold flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all" href="https://xeroxsysparth.my.canva.site/since-you-are-redirected-to-maha-gov-in-this-website-not-responsible-for-security-reasons">
+              10th Board Certificate
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="bg-primary/5 text-primary border border-primary/20 px-6 py-3 rounded-lg font-label-md text-label-md font-bold flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all" href="https://xeroxsysparth.my.canva.site/since-you-are-redirected-to-maha-gov-in-this-website-not-responsible-for-security-reasons">
+              12th Board Certificate
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Column 3 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant hover:border-primary/50 transition-all hover-lift reveal reveal-delay-2">
+<div class="w-12 h-12 bg-tertiary/10 text-tertiary rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined" data-icon="search_insights">search_insights</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Local DB Retrieval</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-md">High-speed archival search for institutional records dating back to 1995. Instant retrieval for verification purposes.</p>
+<ul class="space-y-2 text-on-surface-variant font-label-md text-label-md mb-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Legacy Record Search</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Archive Verification</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Bulk Data Inquiry</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Publications Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-xl bg-surface" id="publications">
+<div class="max-w-max-width mx-auto">
+<div class="text-center mb-xl reveal">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Publications</h2>
+<div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal">
+<!-- Column 1 -->
+<div class="space-y-4">
+<a class="group flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors duration-200" href="https://acrobat.adobe.com/id/urn:aaid:sc:ap:a7224a15-a028-4ec1-b77b-cfd2d1853a43">
+<span class="material-symbols-outlined text-primary/70" data-icon="description">description</span>
+<span class="font-body-md">HSC Marksheet Certificate Related Information</span>
+</a>
+<a class="group flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all duration-200 p-2 hover:bg-primary/5 rounded-lg" href="">
+<span class="material-symbols-outlined text-primary/70 group-hover:scale-110 transition-transform" data-icon="picture_as_pdf">picture_as_pdf</span>
+<span class="font-body-md">Examination Protocol &amp; Guidelines</span>
+</a>
+</div>
+<!-- Column 2 -->
+<div class="space-y-4">
+<a class="group flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all duration-200 p-2 hover:bg-primary/5 rounded-lg" href="#">
+<span class="material-symbols-outlined text-primary/70 group-hover:scale-110 transition-transform" data-icon="campaign">campaign</span>
+<span class="font-body-md">Official Notice: Board Registration Deadline</span>
+</a>
+<a class="group flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all duration-200 p-2 hover:bg-primary/5 rounded-lg" href="#">
+<span class="material-symbols-outlined text-primary/70 group-hover:scale-110 transition-transform" data-icon="menu_book">menu_book</span>
+<span class="font-body-md">Revised Syllabus for Secondary Education</span>
+</a>
+</div>
+<!-- Column 3 -->
+<div class="space-y-4">
+<a class="group flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all duration-200 p-2 hover:bg-primary/5 rounded-lg" href="#">
+<span class="material-symbols-outlined text-primary/70 group-hover:scale-110 transition-transform" data-icon="assignment_ind">assignment_ind</span>
+<span class="font-body-md">Student Conduct &amp; Ethics Handbook</span>
+</a>
+<a class="group flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all duration-200 p-2 hover:bg-primary/5 rounded-lg" href="#">
+<span class="material-symbols-outlined text-primary/70 group-hover:scale-110 transition-transform" data-icon="verified_user">verified_user</span>
+<span class="font-body-md">Privacy &amp; Data Protection Notice</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-xl max-w-max-width mx-auto">
+<!-- Identity -->
+<div class="space-y-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="school">school</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Academic Portal</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">
+        Empowering students and faculty through high-performance digital infrastructure. The official gateway for State Board verification and record management.
+      </p>
+<div class="space-y-2">
+<p class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+          Helpline: +91 9699717124
+        </p>
+<p class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<span>Sarawali Road Near Dwarkesh Nagar,<br/>Boisar 401501</span>
+</p>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface mb-md">Quick Links</h5>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-colors" href="/home">Home</a></li>
+<li><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-colors" href="/register">Register</a></li>
+<li><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-colors" href="/login">Student Login</a></li>
+</ul>
+</div>
+<!-- Support & Policies -->
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface mb-md">Support &amp; Policies</h5>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-colors" href="/services">Revaluation Request</a></li>
+<li><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-colors" href="/support">Helpdesk System</a></li>
+<li><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-colors" href="https://xeroxsysparth.my.canva.site/privacy-policy">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-colors" href="https://xeroxsysparth.my.canva.site/terms-conditions">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-outline-variant px-margin-desktop py-md">
+<div class="max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-on-surface-variant font-body-sm text-body-sm text-center md:text-left">
+        © 2026 Institutional Academic Portal. All rights reserved.
+      </p>
+</div>
+</div>
+</footer>
+<script>
+  // Intersection Observer for Scroll Reveals
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Parallax Effect for Hero Elements
+  document.addEventListener('mousemove', (e) => {
+    const x = (window.innerWidth - e.pageX * 2) / 100;
+    const y = (window.innerHeight - e.pageY * 2) / 100;
+
+    const heroImg = document.getElementById('hero-img');
+    const heroBlob = document.getElementById('hero-blob');
+
+    if (heroImg) heroImg.style.transform = `translate(${x}px, ${y}px)`;
+    if (heroBlob) heroBlob.style.transform = `translate(${-x * 2}px, ${-y * 2}px)`;
+  });
+
+  // Sticky Header Transition
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) {
+      header.classList.add('py-2', 'shadow-md', 'bg-surface-container-lowest/95');
+      header.classList.remove('h-16');
+      header.classList.add('h-14');
+    } else {
+      header.classList.remove('py-2', 'shadow-md', 'bg-surface-container-lowest/95');
+      header.classList.add('h-16');
+      header.classList.remove('h-14');
+    }
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+</body></html>

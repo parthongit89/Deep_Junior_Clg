@@ -164,11 +164,11 @@
 <!-- Seat Number -->
 <div class="flex flex-col gap-xs">
 <label class="font-label-md text-label-md text-on-surface-variant" for="seat-no">Seat No</label>
-<input class="h-12 w-full px-md rounded border border-outline-variant bg-white focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all outline-none text-on-surface font-body-md" id="seat-no" placeholder="Enter your 7-digit seat number" required="" type="text">
+<input class="h-12 w-full px-md rounded border border-outline-variant bg-white focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all outline-none text-on-surface font-body-md" id="seat-no" placeholder="e.g. 1000001 or M005026" required="" type="text" pattern="[Mm]\d{5,6}|\d{7}" title="Please enter a valid seat number (e.g. 1000001 or M005026)" maxlength="7">
 </div>
 <!-- Password -->
 <div class="flex flex-col gap-xs">
-<label class="font-label-md text-label-md text-on-surface-variant" for="password">Password</label>
+<label class="font-label-md text-label-md text-on-surface-variant" for="password">Exam Password</label>
 <div class="relative">
 <input class="h-12 w-full px-md rounded border border-outline-variant bg-white focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all outline-none text-on-surface font-body-md" id="password" placeholder="Enter examination password" required="" type="password">
 <button class="absolute right-md top-1/2 -translate-y-1/2 text-on-surface-variant" type="button">
